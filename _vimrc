@@ -1,4 +1,6 @@
 
+:set runtimepath=~/git/vim,$VIMRUNTIME
+
 set nowrap
 set winheight=100
 
