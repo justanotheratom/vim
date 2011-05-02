@@ -8,6 +8,8 @@ endif
 
 colorscheme default
 
+syntax enable               " doesn't seem to do anything.
+
 " ------------------------------------------------------------------------------
 " Tabs and spaces and indentation.
 " ------------------------------------------------------------------------------
@@ -70,8 +72,8 @@ let g:mapleader = ","
 " Quicker edit/reload of vimrc
 " ------------------------------------------------------------------------------
 
-nmap <leader>v :tabnew ~/.vimrc<CR>
-autocmd! bufwritepost .vimrc source ~/.vimrc
+nmap <leader>v :tabnew ~/git/vim/_vimrc<CR>
+autocmd! bufwritepost _vimrc source ~/.vimrc
 
 " ------------------------------------------------------------------------------
 " Tab navigation.
