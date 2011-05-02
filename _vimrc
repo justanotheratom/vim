@@ -127,9 +127,15 @@ set history     =1000
 set undolevels  =1000
 
 " ------------------------------------------------------------------------------
-" Customize - MultipleSearch2.vim
+" Customize plugin - MultipleSearch
 " ------------------------------------------------------------------------------
 
 :nmap <leader>/  :Search 
 :nmap <leader>r  :SearchReset<CR>
+
+" ------------------------------------------------------------------------------
+" Customize plugin - NerdTree
+" ------------------------------------------------------------------------------
+
+:nmap <leader>n :NERDTreeToggle<CR>
 

@@ -87,7 +87,7 @@ if !exists('g:NERDTreeStatusline')
     let g:NERDTreeStatusline = "%{exists('b:NERDTreeRoot')?b:NERDTreeRoot.path.str():''}"
 
 endif
-call s:initVariable("g:NERDTreeWinPos", "left")
+call s:initVariable("g:NERDTreeWinPos", "right")
 call s:initVariable("g:NERDTreeWinSize", 31)
 
 let s:running_windows = has("win16") || has("win32") || has("win64")
