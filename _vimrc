@@ -1,17 +1,23 @@
 
-:set runtimepath=~/git/vim,$VIMRUNTIME
+
+" ------------------------------------------------------------------------------
+" All my plugins are saved in git repo which lives at ~/git/vim locally.
+" ------------------------------------------------------------------------------
+
+:set runtimepath+=~/git/vim/multiplesearch
+
+" ------------------------------------------------------------------------------
+" Miscellaneous.
+" ------------------------------------------------------------------------------
 
 set nowrap
 set winheight=100
+syntax enable               " doesn't seem to do anything.
+colorscheme default
 
 if has("gui_running")
     set cursorline          " highlight cursor line.
 endif
-
-colorscheme default
-
-syntax enable               " doesn't seem to do anything.
-
 
 " ------------------------------------------------------------------------------
 " Do not create backup or swap files.
@@ -103,3 +109,11 @@ autocmd bufenter,bufread * :cd %:p:h
 " ------------------------------------------------------------------------------
 
 set autoread
+
+" ------------------------------------------------------------------------------
+" Customize - MultipleSearch2.vim
+" ------------------------------------------------------------------------------
+
+:nmap <leader>/  :Search 
+:nmap <leader>r  :SearchReset<CR>
+
