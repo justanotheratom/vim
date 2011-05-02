@@ -17,6 +17,8 @@ colorscheme default
 
 if has("gui_running")
     set cursorline          " highlight cursor line.
+    set guioptions +=a      " automatically copy visual selection clipboard.
+                            " doesn't seem to work.
 endif
 
 " ------------------------------------------------------------------------------
@@ -73,11 +75,17 @@ set smartcase
 
 nnoremap <silent> _ :nohl<CR>
 
+" Search current visual selection.
+vmap S y/<C-R>=escape(@",'/\')<CR>
+
 " ------------------------------------------------------------------------------
-" Turn off all menus. Note that some plugins will still create menus.
+" Turn off all menus and toolbars. Note that some plugins will still create menus.
 " ------------------------------------------------------------------------------
 
 :aunmenu *
+if has("gui_running")
+    set guioptions -=T
+endif
 
 " ------------------------------------------------------------------------------
 " Change leader character to ','
@@ -109,6 +117,13 @@ autocmd bufenter,bufread * :cd %:p:h
 " ------------------------------------------------------------------------------
 
 set autoread
+
+" ------------------------------------------------------------------------------
+" Remember a lot of commands and edits.
+" ------------------------------------------------------------------------------
+
+set history     =1000
+set undolevels  =1000
 
 " ------------------------------------------------------------------------------
 " Customize - MultipleSearch2.vim
